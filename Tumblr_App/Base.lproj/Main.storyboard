@@ -23,22 +23,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="156" id="hMM-L6-nDp" customClass="PhotoCell" customModule="Tumblr_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="156"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="170" id="hMM-L6-nDp" customClass="PhotoCell" customModule="Tumblr_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hMM-L6-nDp" id="bsP-lm-5gQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="155.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="169.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Her-bf-zha" userLabel="Photo">
-                                                    <rect key="frame" x="0.0" y="-9" width="342" height="248"/>
+                                                    <rect key="frame" x="0.0" y="-9" width="376" height="201"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="PhotoImageView" destination="Her-bf-zha" id="1yH-fi-fI9"/>
-                                            <segue destination="qAl-BL-1bF" kind="push" id="sxr-Jd-uzG"/>
+                                            <segue destination="Avl-z4-for" kind="push" id="Ejb-P1-kaU"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -54,32 +54,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1503" y="125"/>
+            <point key="canvasLocation" x="1501.5999999999999" y="124.58770614692655"/>
         </scene>
         <!--Photo Details View Controller-->
-        <scene sceneID="QAj-PF-nXl">
+        <scene sceneID="h1u-VM-9Aj">
             <objects>
-                <viewController id="qAl-BL-1bF" customClass="PhotoDetailsViewController" customModule="Tumblr_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mwG-tp-tug">
+                <viewController id="Avl-z4-for" customClass="PhotoDetailsViewController" customModule="Tumblr_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KrS-ak-Y8b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24i-BI-sH8">
-                                <rect key="frame" x="16" y="88" width="343" height="144"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R1Q-Ze-GZe">
+                                <rect key="frame" x="16" y="103" width="343" height="158"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="NaP-hB-2Rk"/>
+                        <viewLayoutGuide key="safeArea" id="LSG-mE-A0F"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xTg-An-3wE"/>
+                    <navigationItem key="navigationItem" id="LBL-fn-O1g"/>
                     <connections>
-                        <outlet property="photoViewController" destination="mwG-tp-tug" id="Kju-Zy-oYf"/>
+                        <outlet property="backDropImageView" destination="R1Q-Ze-GZe" id="ZWR-Nw-njz"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qfc-9i-rCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cel-rC-wdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2350" y="124"/>
+            <point key="canvasLocation" x="2432.8000000000002" y="124.58770614692655"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v5g-lI-QuN">

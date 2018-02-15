@@ -16,6 +16,7 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
     
     var posts: [[String: Any]] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -24,7 +25,10 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         TableView.rowHeight = 200
         
         fetchPhotos()
+        
     }
+    
+    
     
     func fetchPhotos(){
         let url = URL(string: "https://api.tumblr.com/v2/blog/humansofnewyork.tumblr.com/posts/photo?api_key=Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV")!
@@ -58,6 +62,20 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         cell.PhotoImageView.af_setImage(withURL: url!)
         
         return cell
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! PhotoDetailsViewController
+        let cell = sender as! UITableViewCell
+        if let indexPath = TableView.indexPath(for: cell) {
+        let post = posts[indexPath.section]
+        let photos = post["photos"] as! [[String: Any]]
+        let photo = photos[0]
+        let originalSize = photo["original_size"] as! [String: Any]
+        let urlString = originalSize["url"] as! String
+        vc.imageURL = URL(string: urlString)
+        }
     }
     
     
